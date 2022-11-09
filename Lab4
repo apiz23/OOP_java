@@ -1,0 +1,56 @@
+public class Graduation {
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter matric number: ");
+        String matric_no = scan.nextLine();
+
+        Student std = new Student(matric_no);
+        Convo convo = new Convo(20222023);
+        University uni = new University("UTHM");
+        Award ward = new Award("Vice Caunsellor");
+        Degree deg = new Degree("IT","1st");
+
+        System.out.println(std.student_matric + " is given the award of " + ward.award_title + " for " + uni.unviersity_name + " graduation on session of " + convo.convo_session
+        + " for Diploma of " + deg.degree_field + " with " + deg.degree_class + " class.");
+    }
+}
+
+class Student{
+    String student_matric;
+
+    Student(String value_studentMatric){
+        this.student_matric = value_studentMatric;
+    }
+}
+
+class Convo{
+    int convo_session;
+
+    Convo(int value_convoSession){
+        this.convo_session = value_convoSession;
+    }
+}
+
+class University{
+    String unviersity_name;
+
+    University(String value_universityName){
+        this.unviersity_name = value_universityName;
+    }
+}
+
+class Award{
+    String award_title;
+
+    Award(String value_awardTitle){
+        this.award_title = value_awardTitle;
+    }
+}
+
+class Degree{
+    String degree_field, degree_class;
+    Degree(String value_degreeField, String value_degreeClass){
+        this.degree_class = value_degreeClass;
+        this.degree_field = value_degreeField;
+    }
+}
