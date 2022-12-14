@@ -26,8 +26,8 @@ public class Banking {
         }while(inp.nextInt() == 1);
     }
 
-    static void displaySummary(Account Details, Customer info, double sendWithdraw){
-        System.out.println("\nAccount holder : " + Details.accountNumber +
+    static void displaySummary(Account details, Customer info, double sendWithdraw){
+        System.out.println("\nAccount holder : " + details.accountNumber +
                             "\nAccount number : " + info.name +
                             "\nBalance amount : " + sendWithdraw);
     }
