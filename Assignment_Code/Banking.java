@@ -18,21 +18,17 @@ public class Banking {
 
             if(withdraw > acc.accountAmount){
                 JOptionPane.showMessageDialog(null, "Insufficient Amount !");
-                displaySummary(acc.accountNumber,cust.name, acc.accountAmount);
+                displaySummary(acc,cust, acc.accountAmount);
             }else{
-                displaySummary(acc.accountNumber,cust.name, acc.checkBalance(withdraw));
-            }
-            System.out.print("Withdraw again? 1-yes, 0-no >>>> ");
+                displaySummary(acc,cust, acc.checkBalance(withdraw));
+            }System.out.print("Withdraw again? 1-yes, 0-no >>>> ");
 
         }while(inp.nextInt() == 1);
     }
 
-    static void displaySummary(String AccountDetails, String CustomerInfo, double sendWithdraw){
-        System.out.println("\nAccount holder : " + AccountDetails +
-                            "\nAccount number : " + CustomerInfo +
+    static void displaySummary(Account Details, Customer info, double sendWithdraw){
+        System.out.println("\nAccount holder : " + Details.accountNumber +
+                            "\nAccount number : " + info.name +
                             "\nBalance amount : " + sendWithdraw);
     }
 }
-
-
-
